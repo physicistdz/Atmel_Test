@@ -8,10 +8,10 @@ OBJCOPY = avr-objcopy.exe
 AVRDUDE := avrdude
 
 #Options for avr-gcc
-CFLAGS = -g -O3 -o
+CFLAGS = -g -o
 
 #Linking options for avr-gcc
-LFLAGS = -O3 -mmcu=atmega8 -o
+LFLAGS = -mmcu=atmega8 -o
 
 #Options for HEX file generation
 HFLAGS = -j .text -j .data -O ihex
@@ -23,7 +23,7 @@ DUDEFLAGS += arduino
 DUDEFLAGS += -p
 DUDEFLAGS += m8  
 DUDEFLAGS += -P 
-DUDEFLAGS += COM3 
+DUDEFLAGS += COM6 
 DUDEFLAGS += -b 
 DUDEFLAGS += 19200 
 DUDEFLAGS += -U flash:w:$(MAIN_HEX_PATH):i

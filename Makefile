@@ -1,17 +1,18 @@
 #Main application file name
 MAIN_APP = Atmel
-#Main hex file path in windows format MAIN_HEX_PATH =
-MAIN_HEX_PATH = C:\Users\AKRAM\Documents\GitHub\Atmel_Test\$(MAIN_APP).hex
+#Main hex file path in windows format
+MAIN_HEX_PATH = Write the full directory path for the hex file\$(MAIN_APP).hex
+
 # Compiler and other Section
 CC = avr-gcc
 OBJCOPY = avr-objcopy.exe
 AVRDUDE := avrdude
 
 #Options for avr-gcc
-CFLAGS = -g -o
+CFLAGS = -g -Os -o
 
 #Linking options for avr-gcc
-LFLAGS = -mmcu=atmega8 -o
+LFLAGS = -Os -mmcu=atmega8 -o
 
 #Options for HEX file generation
 HFLAGS = -j .text -j .data -O ihex
@@ -19,7 +20,7 @@ HFLAGS = -j .text -j .data -O ihex
 #Options for avrdude to burn the hex file
 #MMCU model here according to avrdude options
 DUDEFLAGS = -c
-DUDEFLAGS += arduino 
+DUDEFLAGS += usbasp 
 DUDEFLAGS += -p
 DUDEFLAGS += m8  
 DUDEFLAGS += -P 

@@ -2,20 +2,15 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"type": "shell",
-			"label": "avr-gcc build active file",
-			"command": "C:\\Program Files (x86)\\Atmel\\Studio\\7.0\\toolchain\\avr8\\avr8-gnu-toolchain\\bin\\avr-gcc.exe",
+			"type" : "shell",
+			"label" : "avr-gcc build active file",
+			"command" : "make.exe",
 			
 			//"detail": "CMake template configure task"
 			"args": [
-			"-g",
-			"${file}",
-			"-o",
-			"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			
 			],
-			"options": {
-			"cwd": "C:\\Program Files (x86)\\Atmel\\Studio\\7.0\\toolchain\\avr8\\avr8-gnu-toolchain\\bin"
-			},
+			
 			"problemMatcher": [
 			"$gcc"
 			]

@@ -4,7 +4,7 @@
 #endif
 
 #include <avr/io.h>
-#include <util/delay.h>
+//#include <avr/delay.h>
 int main(void)
 {
 //connecting led on port B
@@ -12,9 +12,9 @@ DDRC |= 1 << PIN5;
 while(1)
 {
 
-_delay_ms(1000);
+//_delay_ms(1000);
 PORTC ^= 1<<PIN5;
-_delay_ms(1000);
+//_delay_ms(1000);
 
 }
 return 0;
